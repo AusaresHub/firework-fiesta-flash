@@ -80,7 +80,7 @@ export default function HowToOrderPage() {
       
       <div className="mt-16 text-center">
         <FireworkIcon className="h-12 w-12 mx-auto text-[#d12229] mb-4" />
-        <p className="text-gray-600 italic">Thank you for shopping with us!</p>
+        <p className="text-gray-600 italic">Thank you for shopping with Firework Fiesta Flash!</p>
       </div>
     </div>
   );
