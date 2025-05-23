@@ -57,12 +57,31 @@ export default function HomePage() {
         transition={{ duration: 0.8 }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Left QR Code - CashApp */}
             <motion.div 
-              className="md:w-1/2 mb-8 md:mb-0"
+              className="md:w-1/4 mb-8 md:mb-0"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
+            >
+              <div className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <h3 className="text-lg font-bold text-[#d12229] mb-3">CashApp</h3>
+                <img 
+                  src="/lovable-uploads/9ecf198c-2d2f-456c-8d1b-149202f7735e.png" 
+                  alt="CashApp QR Code" 
+                  className="h-32 w-32 mx-auto mb-2" 
+                />
+                <p className="text-sm font-medium text-gray-700">Scan for CashApp</p>
+              </div>
+            </motion.div>
+            
+            {/* Center Content - How to Order */}
+            <motion.div 
+              className="md:w-2/4 text-center"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Order?</h2>
               <p className="text-white text-lg mb-6">Follow our simple ordering process to get your fireworks in time for celebration.</p>
@@ -74,24 +93,21 @@ export default function HomePage() {
               </Link>
             </motion.div>
             
+            {/* Right QR Code - Chime */}
             <motion.div 
-              className="md:w-1/2"
+              className="md:w-1/4 mt-8 md:mt-0"
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-[#d12229] mb-4">Payment Options</h3>
-                <div className="flex justify-center space-x-8">
-                  <div className="text-center">
-                    <img src="/lovable-uploads/b34e93de-8b7f-467a-b8f7-a3e5de67744b.png" alt="Chime QR Code" className="h-24 w-24 mx-auto mb-2" />
-                    <p className="font-semibold text-gray-700">Chime</p>
-                  </div>
-                  <div className="text-center">
-                    <img src="/lovable-uploads/9ecf198c-2d2f-456c-8d1b-149202f7735e.png" alt="CashApp QR Code" className="h-24 w-24 mx-auto mb-2" />
-                    <p className="font-semibold text-gray-700">CashApp</p>
-                  </div>
-                </div>
+              <div className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <h3 className="text-lg font-bold text-[#d12229] mb-3">Chime</h3>
+                <img 
+                  src="/lovable-uploads/b34e93de-8b7f-467a-b8f7-a3e5de67744b.png" 
+                  alt="Chime QR Code" 
+                  className="h-32 w-32 mx-auto mb-2" 
+                />
+                <p className="text-sm font-medium text-gray-700">Scan for Chime</p>
               </div>
             </motion.div>
           </div>
