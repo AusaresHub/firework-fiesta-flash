@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FourthOfJulyDivider } from '../components/FourthOfJulyDivider';
@@ -11,10 +10,6 @@ export default function ProductDetailPage() {
   const [product, setProduct] = useState(
     products.find((p) => p.id === id) || null
   );
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
   
   if (!product) {
     return (

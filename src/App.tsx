@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -12,6 +12,18 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import HowToOrderPage from "./pages/HowToOrderPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import { useEffect } from "react";
+
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 
 const queryClient = new QueryClient();
 
@@ -22,6 +34,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
+          <ScrollToTop />
           <Header />
           <main className="flex-grow">
             <Routes>
