@@ -24,7 +24,7 @@ export function Header() {
             </motion.div>
             <motion.span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-500" whileHover={{
             scale: 1.05
-          }}>2025 Firework Sale</motion.span>
+          }}>2025 Fireworks Sale</motion.span>
           </Link>
           <nav className="hidden md:flex space-x-6">
             <Link to="/" className="hover:text-blue-500 transition duration-300">Home</Link>
