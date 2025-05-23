@@ -12,13 +12,14 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import HowToOrderPage from "./pages/HowToOrderPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 // Scroll to top component
 function ScrollToTop() {
   const { pathname } = useLocation();
   
-  useEffect(() => {
+  // Using useLayoutEffect for more immediate scroll reset before render
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   

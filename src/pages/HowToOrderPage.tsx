@@ -17,7 +17,7 @@ export default function HowToOrderPage() {
     <div className="container mx-auto px-4 py-12">
       <motion.div
         className="text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
@@ -27,7 +27,7 @@ export default function HowToOrderPage() {
       
       <motion.div
         className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
@@ -36,7 +36,7 @@ export default function HowToOrderPage() {
             <motion.div 
               key={index}
               className="flex items-start"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
