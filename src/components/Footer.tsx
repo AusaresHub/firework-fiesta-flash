@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FireworkIcon } from './FireworkIcon';
 
 export function Footer() {
@@ -29,6 +30,9 @@ export function Footer() {
         <div className="text-center mt-6 text-sm">
           <p>© 2025 Firework Fiesta Flash. All rights reserved.</p>
           <p className="mt-2">WARNING: Fireworks are dangerous. Use only as directed.</p>
+          <div className="mt-4">
+            <Link to="/privacy-policy" className="hover:underline transition duration-300">Privacy Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
