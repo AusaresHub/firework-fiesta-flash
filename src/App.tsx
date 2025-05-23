@@ -18,9 +18,16 @@ import { useEffect, useLayoutEffect } from "react";
 function ScrollToTop() {
   const { pathname } = useLocation();
   
-  // Using useLayoutEffect for more immediate scroll reset before render
+  // Force scroll reset immediately before render
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+    // Use a more aggressive approach to ensure scroll reset
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto" // Use "auto" instead of "smooth" for immediate effect
+    });
   }, [pathname]);
   
   return null;

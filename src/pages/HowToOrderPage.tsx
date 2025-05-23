@@ -1,5 +1,4 @@
 
-import { motion } from 'framer-motion';
 import { FireworkIcon } from '../components/FireworkIcon';
 
 export default function HowToOrderPage() {
@@ -15,31 +14,15 @@ export default function HowToOrderPage() {
   
   return (
     <div className="container mx-auto px-4 py-12">
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-[#d12229] mb-2">How to Order</h1>
         <p className="text-gray-600">Follow these steps to complete your order</p>
-      </motion.div>
+      </div>
       
-      <motion.div
-        className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8"
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <div className="space-y-8">
           {steps.map((step, index) => (
-            <motion.div 
-              key={index}
-              className="flex items-start"
-              initial={{ opacity: 0, x: 0 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-            >
+            <div key={index} className="flex items-start">
               <div className="flex-shrink-0 bg-[#ffcc00] rounded-full p-2 mr-4">
                 <span className="flex items-center justify-center h-6 w-6 text-red-600 font-bold">
                   {index + 1}
@@ -48,25 +31,16 @@ export default function HowToOrderPage() {
               <div>
                 <p className="text-lg text-gray-800">{step}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
       
-      <motion.div
-        className="mt-16 max-w-3xl mx-auto"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
+      <div className="mt-16 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold text-center text-[#d12229] mb-6">Payment Methods</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            className="bg-white rounded-lg shadow-lg p-6 text-center"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
             <h3 className="text-xl font-bold mb-4">Chime</h3>
             <img 
               src="/lovable-uploads/b34e93de-8b7f-467a-b8f7-a3e5de67744b.png" 
@@ -74,13 +48,9 @@ export default function HowToOrderPage() {
               className="h-48 w-48 mx-auto mb-4" 
             />
             <p className="text-gray-700">Scan with your Chime app</p>
-          </motion.div>
+          </div>
           
-          <motion.div
-            className="bg-white rounded-lg shadow-lg p-6 text-center"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
             <h3 className="text-xl font-bold mb-4">CashApp</h3>
             <img 
               src="/lovable-uploads/9ecf198c-2d2f-456c-8d1b-149202f7735e.png" 
@@ -88,16 +58,11 @@ export default function HowToOrderPage() {
               className="h-48 w-48 mx-auto mb-4" 
             />
             <p className="text-gray-700">Scan with your CashApp</p>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
       
-      <motion.div
-        className="mt-16 max-w-3xl mx-auto p-6 bg-red-100 border-l-4 border-red-500 rounded-md"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
+      <div className="mt-16 max-w-3xl mx-auto p-6 bg-red-100 border-l-4 border-red-500 rounded-md">
         <div className="flex">
           <div className="flex-shrink-0">
             <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -111,17 +76,12 @@ export default function HowToOrderPage() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
       
-      <motion.div
-        className="mt-16 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
+      <div className="mt-16 text-center">
         <FireworkIcon className="h-12 w-12 mx-auto text-[#d12229] mb-4" />
         <p className="text-gray-600 italic">Thank you for shopping with us!</p>
-      </motion.div>
+      </div>
     </div>
   );
 }
