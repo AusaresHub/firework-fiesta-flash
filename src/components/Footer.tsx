@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <FireworkIcon className="h-6 w-6" />
-            <span className="font-bold text-lg">firework-fiesta-flash</span>
+            <span className="font-bold text-lg">Firework Fiesta Flash</span>
           </div>
           <motion.div 
             className="flex space-x-4"
@@ -28,7 +28,7 @@ export function Footer() {
           </motion.div>
         </div>
         <div className="text-center mt-6 text-sm">
-          <p>© 2025 firework-fiesta-flash. All rights reserved.</p>
+          <p>© 2025 Firework Fiesta Flash. All rights reserved.</p>
           <p className="mt-2">WARNING: Fireworks are dangerous. Use only as directed.</p>
           <div className="mt-4">
             <Link to="/privacy-policy" className="hover:underline transition duration-300">Privacy Policy</Link>

@@ -24,7 +24,7 @@ export function Header() {
               className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-blue-500"
               whileHover={{ scale: 1.05 }}
             >
-              firework-fiesta-flash
+              Firework Fiesta Flash
             </motion.span>
           </Link>
           <nav className="hidden md:flex space-x-6">
